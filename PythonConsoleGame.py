@@ -2,14 +2,15 @@ from random import randrange
 
 print("Ваша задача угадать число")
 
-def CreateRandomNumber():
+def CreateRandomNumber(): # Создание случаного числа
     return randrange(0, 101)
 
-CurrentValue = CreateRandomNumber()
+CurrentValue = CreateRandomNumber() # "Запекание" случайного числа
 
 while True:
-    UserValueInput = int(input("--->"))
-    if UserValueInput == CurrentValue:
+    UserValueInput = int(input("--->")) # Получение числа от пользователя
+    
+    if UserValueInput == CurrentValue: # Проверка на совпадение
         print(f"Верно вы угадали! {CurrentValue}")
         CurrentValue = CreateRandomNumber()
 
